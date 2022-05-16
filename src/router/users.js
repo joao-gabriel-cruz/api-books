@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { response, request } = require('express');
+
 const pool = require('../data/conect');
 
 const usersRouter = router;
