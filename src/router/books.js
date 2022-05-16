@@ -55,7 +55,13 @@ booksRouter.put('/:id', (request, response) => {
   const books = request.body;
 
   pool.query(
-    `UPDATE books Set nome = '${books.nome}', escritor = '${books.escritor}', ano = '${books.ano}', genero = '${books.genero}', paginas = '${books.paginas}' WHERE id = '${id}' `,
+    `UPDATE books Set 
+      nome = '${books.nome}',
+      escritor = '${books.escritor}',
+      ano = '${books.ano}',
+      genero = '${books.genero}',
+      paginas = '${books.paginas}'
+      WHERE id = '${id}' `,
     (err) => {
       if (err) {
         console.log(err);
